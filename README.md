@@ -1,6 +1,7 @@
 #  [![Build Status](https://secure.travis-ci.org/psychonull/point2js.png?branch=master)](http://travis-ci.org/psychonull/point2js)
 
-> 2-dimensional Point class with support for operations
+> Standalone two-dimensional Point class with support for vector operations, heavily inspired in [PaperJS](https://github.com/paperjs/paper.js/blob/b1329f1db595c38c2da84826e666a14205df5c82/src/basic/Point.js) and [Phaser](http://docs.phaser.io/Point.js.html) implementations.
+> Here we are trying to make a fluent, side-effects free, tested api.
 
 ## Getting Started
 
@@ -18,7 +19,7 @@ $ grunt browserify
 
 ## Documentation
 
-_(Coming soon)_
+_(Coming soon) - check out the tests_
 
 
 ## Examples
