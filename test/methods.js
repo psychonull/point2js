@@ -52,4 +52,33 @@ describe('Operations', function(){
     });
   });
 
+  describe('subtract()', function(){
+    it('must return a new instance with the result', function(){
+      var p = new Point2(1,1);
+      var result = p.subtract(1,1).subtract(100,-100);
+      expect(result).to.not.equal(p);
+      expect(result.x).to.equal(-100);
+      expect(result.y).to.equal(100);
+    });
+  });
+
+  describe('multiply()', function(){
+    it('must return a new instance with the result', function(){
+      var p = new Point2(1,1);
+      var result = p.multiply(0.5,4).multiply(0.5,2);
+      expect(result).to.not.equal(p);
+      expect(result.x).to.equal(0.25);
+      expect(result.y).to.equal(8);
+    });
+  });
+
+  describe('divide()', function(){
+    it('must return a new instance with the result', function(){
+      var p = new Point2(1,1);
+      var result = p.divide(2,4);
+      expect(result).to.not.equal(p);
+      expect(result.x).to.equal(0.5);
+      expect(result.y).to.equal(0.25);
+    });
+  });
 });
