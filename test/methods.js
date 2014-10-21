@@ -36,4 +36,20 @@ describe('Operations', function(){
     });
   });
 
+  describe('add()', function(){
+    it('must return a new instance with the added values', function(){
+      var p = new Point2(1,1);
+      var result = p.add(1,1);
+      expect(result).to.not.equal(p);
+      expect(result.x).to.equal(2);
+      expect(result.y).to.equal(2);
+    });
+    it('must allow chaining', function(){
+      var p = new Point2();
+      var result = p.add(1,2).add(43, 42).add(-2, -2);
+      expect(result.x).to.equal(42);
+      expect(result.y).to.equal(42);
+    });
+  });
+
 });
