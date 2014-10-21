@@ -15,4 +15,25 @@ describe('Operations', function(){
     });
   });
 
+  describe('set()', function(){
+    it('must change values with the same behavior as the constructor', function() {
+      var p = new Point2(1,2);
+      p.set(6,6);
+      expect(p.x).to.equal(6);
+      expect(p.y).to.equal(6);
+      p.set({x: 0, y: 0});
+      expect(p.x).to.equal(0);
+      expect(p.y).to.equal(0);
+      p.set([100,100]);
+      expect(p.x).to.equal(100);
+      expect(p.y).to.equal(100);
+    });
+    it('must allow chaining', function() {
+      var p = new Point2();
+      p.set(1,1).set({x: 0, y: 10.2});
+      expect(p.x).to.equal(0);
+      expect(p.y).to.equal(10.2);
+    });
+  });
+
 });
