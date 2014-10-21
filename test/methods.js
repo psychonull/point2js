@@ -15,6 +15,19 @@ describe('Operations', function(){
     });
   });
 
+  describe('equals()', function(){
+    it('must return true if same x and y', function(){
+      var p1 = new Point2(0,0),
+        p2 = p1.clone();
+      expect(p1.equals(p2)).to.equal(true);
+    });
+    it('must return false if different x or y', function(){
+      var p1 = new Point2(0,0),
+        p2 = new Point2(0,1);
+      expect(p1.equals(p2)).to.equal(false);
+    });
+  });
+
   describe('set()', function(){
     it('must change values with the same behavior as the constructor', function() {
       var p = new Point2(1,2);
@@ -81,4 +94,5 @@ describe('Operations', function(){
       expect(result.y).to.equal(0.25);
     });
   });
+
 });
