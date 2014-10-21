@@ -38,6 +38,12 @@ describe('Constructor', function(){
     expect(p.y).to.equal(1);
   });
 
+  it('must initialize x and y if Point2 passed', function() {
+    var p = new Point2(new Point2([1, 1]));
+    expect(p.x).to.equal(1);
+    expect(p.y).to.equal(1);
+  });
+
   it('accepts another Point instance in the constructor', function() {
     var p = new Point2(new Point2(1,2));
     expect(p.x).to.equal(1);
