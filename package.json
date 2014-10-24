@@ -1,6 +1,6 @@
 {
   "name": "point2js",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "lib/point2js.js",
   "description": "2-dimensional Point class with support for operations",
   "homepage": "https://github.com/psychonull/point2js",
